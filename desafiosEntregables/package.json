@@ -1,0 +1,27 @@
+{
+  "name": "desafiosentregables",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelo-bonda/backendBonda.git"
+  },
+  "keywords": [
+    "backend",
+    "javascript",
+    "express.js"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcelo-bonda/backendBonda/issues"
+  },
+  "homepage": "https://github.com/marcelo-bonda/backendBonda#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
