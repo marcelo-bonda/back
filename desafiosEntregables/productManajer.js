@@ -77,16 +77,16 @@ class ProductManager {
 }
 
 async deleteProduct(idToDelete) {
-  const indexToDelete = this.products.findIndex(product => product.id === idToDelete);
-
-  if (indexToDelete !== -1) {
-    this.products.splice(indexToDelete, 1);
-    await this.saveProducts();
-    console.log(`Producto con ID ${idToDelete} eliminado.`);
-  } else {
-    console.log(`Producto con ID ${idToDelete} no encontrado.`);
+    const indexToDelete = this.products.findIndex(product => product.id === idToDelete);
+  
+    if (indexToDelete !== -1) {
+      this.products.splice(indexToDelete, 1);
+      await this.saveProducts(); 
+      console.log(`Producto con ID ${idToDelete} eliminado.`);
+    } else {
+      console.log(`Producto con ID ${idToDelete} no encontrado.`);
+    }
   }
-}
 getProducts() {
     return this.products;
 }

@@ -18,10 +18,10 @@ const { limit } = req.query;
 const products =  productManager.getProducts();
 
 if (limit) {
-const limitedProducts = products.slice(0, parseInt(limit));
-res.json(limitedProducts);
+    const limitedProducts = products.slice(0, parseInt(limit));
+    res.status(200).json(limitedProducts);  
 } else {
-res.json(products);
+    res.status(200).json(products);  
 }
 });
 
@@ -31,12 +31,11 @@ const products = await productManager.getProducts();
 const product = products.find(p => p.id === parseInt(pid));
 
 if (product) {
-res.json(product);
+    res.status(200).json(product);      
 } else {
-res.status(404).json({ error: 'Producto no encontrado' });
+    res.status(404).json({ error: 'Producto no encontrado' }); 
 }
 });
-
 
 
 app.listen(port, () => {
